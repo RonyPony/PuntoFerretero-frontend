@@ -3,6 +3,8 @@ import { MenuComponent } from "./components/menu/menu.component";
 import { LandingPageComponent } from "./components/landing-page/landing-page.component";
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app.routes";
+import { FormsModule } from "@angular/forms";
+import { BrowserModule } from "@angular/platform-browser";
 
 @NgModule({
 
@@ -15,7 +17,8 @@ import { AppRoutingModule } from "./app.routes";
 
     imports: [
         AppRoutingModule,
-        MenuComponent
+        MenuComponent,
+        FormsModule
     ],
 
     providers: [],
