@@ -1,0 +1,29 @@
+img {
+    height: 138px;
+    border-radius: 27px;
+    cursor: pointer;
+}
+
+.text {
+    cursor: pointer;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selector {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    padding-top: 10rem;
+}
+
+.option {
+    background-color: lightblue;
+    padding: 38px;
+    border-radius: 25px;
+    cursor: pointer;
+}

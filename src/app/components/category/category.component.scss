@@ -1,59 +1,29 @@
-/* CSS */
-$primary-color: #2c3e50;
-$secondary-color: #e79e3ece;
+img {
+    height: 138px;
+    border-radius: 27px;
+    cursor: pointer;
+}
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+.text {
+    cursor: pointer;
+}
+
+.centered {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-.table-container {
-    width: 80%;
+.selector {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    padding-top: 10rem;
 }
 
-.title {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-table,
-th,
-td {
-    border: 1px solid #dddddd;
-}
-
-th,
-td {
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.action-button {
-    background-color: $secondary-color;
-    color: $primary-color;
-    padding: 10px 20px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
+.option {
+    background-color: lightblue;
+    padding: 38px;
+    border-radius: 25px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-
-    &:hover {
-        background-color: darken($secondary-color, 10%);
-    }
 }

@@ -1,7 +1,6 @@
 img {
     height: 138px;
     border-radius: 27px;
-    margin-left: 2rem;
     cursor: pointer;
 }
 
@@ -9,9 +8,22 @@ img {
     cursor: pointer;
 }
 
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .selector {
     display: flex;
     gap: 3rem;
     justify-content: center;
     padding-top: 10rem;
+}
+
+.option {
+    background-color: lightblue;
+    padding: 38px;
+    border-radius: 25px;
+    cursor: pointer;
 }

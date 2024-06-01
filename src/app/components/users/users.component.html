@@ -1,13 +1,16 @@
-<!-- <app-user-list></app-user-list> -->
-
 <div class="selector">
-    <div class="option">
-        <img (click)="goTo(0)" src="../../../assets/images/lupa.jpg">
-        <h3 (click)="goTo(0)" class="text">Consultar Usuarios</h3>
+    <div class="option" (click)="goTo(0)">
+        <div class="centered">
+            <img src="../../../assets/images/lupa.jpg">
+        </div>
+        <h3 class="text">Consultar Usuario</h3>
     </div>
 
-    <div>
-        <img (click)="goTo(1)" src="../../../assets/images/new.jpg">
-        <h3 (click)="goTo(1)" class="text">Agregar Usuarios</h3>
+    <div class="option" (click)="goTo(1)">
+        <div class="centered">
+            <img src="../../../assets/images/new.jpg">
+        </div>
+
+        <h3 class="text">Agregar Usuario</h3>
     </div>
 </div>
