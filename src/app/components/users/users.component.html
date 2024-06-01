@@ -1,2 +1,13 @@
-<p>users works!</p>
-<app-user-list></app-user-list>
+<!-- <app-user-list></app-user-list> -->
+
+<div class="selector">
+    <div class="option">
+        <img (click)="goTo(0)" src="../../../assets/images/lupa.jpg">
+        <h3 (click)="goTo(0)" class="text">Consultar Usuarios</h3>
+    </div>
+
+    <div>
+        <img (click)="goTo(1)" src="../../../assets/images/new.jpg">
+        <h3 (click)="goTo(1)" class="text">Agregar Usuarios</h3>
+    </div>
+</div>

@@ -1,1 +1,37 @@
-<p>create works!</p>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - PuntoFerretero</title>
+    <!-- Asegúrate de tener Bootstrap CSS en tu proyecto -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="mt-5">Formulario</h2>
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="form-group">
+                <label for="apellido">Apellido</label>
+                <input type="text" class="form-control" id="apellido" placeholder="Ingresa tu apellido">
+            </div>
+            <div class="form-group">
+                <label for="clave">Clave</label>
+                <input type="password" class="form-control" id="clave" placeholder="Ingresa tu clave">
+            </div>
+            <div class="form-group">
+                <label for="repetir-clave">Repetir Clave</label>
+                <input type="password" class="form-control" id="repetir-clave" placeholder="Repite tu clave">
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </div>
+</body>
+
+</html>

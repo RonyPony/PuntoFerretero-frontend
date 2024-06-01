@@ -8,5 +8,14 @@ import { Component } from '@angular/core';
   styleUrl: './users.component.scss'
 })
 export class UsersComponent {
-
+  goTo(value: number) {
+    switch (value) {
+      case 0:
+        break;
+      case 1:
+        break;
+      default:
+        break;
+    }
+  }
 }

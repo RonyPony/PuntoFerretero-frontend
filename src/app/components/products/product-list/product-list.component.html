@@ -2,7 +2,7 @@
 <div class="table-container">
     <h2 class="title">Productos</h2>
     <input [(ngModel)]="searchTerm" placeholder="Buscar...">
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Nombre</th>
@@ -22,7 +22,7 @@
                 <td>{{ item.description }}</td>
                 <td>{{ item.discount }}</td>
                 <td>{{ item.updated }}</td>
-                <td><button class="action-button">Editar</button></td>
+                <td><button class="btn btn-warning">Editar</button></td>
             </tr>
         </tbody>
     </table>
