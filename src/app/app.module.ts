@@ -8,6 +8,7 @@ import { AppRoutingModule } from "./app.routes";
 
     declarations: [
         AppComponent,
+
         MenuComponent,
         LandingPageComponent
     ],
