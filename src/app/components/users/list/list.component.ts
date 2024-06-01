@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { AuthServiceService } from '../../../services/auth.service.service';
 
 @Component({
   selector: 'app-user-list',
@@ -9,15 +10,26 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './list.component.html',
   styleUrl: './list.component.scss'
 })
-export class UserListComponent {
+export class UserListComponent implements OnInit {
+  constructor(
+    private authService: AuthServiceService
+  ) {
+
+  }
+  ngOnInit(): void {
+    this.getData();
+  }
   searchTerm: string = '';
   data: any[] = [
-    { nombre: 'Juan', apellido: 'Martinez', created: '10/10/2021', updated: '10/10/2021' },
-    { nombre: 'Miguel', apellido: 'jimenez', created: '10/10/2021', updated: '10/10/2021' },
-    { nombre: 'Pedro', apellido: 'cruz', created: '10/10/2021', updated: '10/10/2021' },
-    { nombre: 'Pepe', apellido: 'amarillo', created: '10/10/2021', updated: '10/10/2021' },
     // Agrega más datos según sea necesario
   ];
+
+  getData() {
+    this.authService.getUsers().subscribe((x) => {
+      console.log(x)
+      this.data = x
+    })
+  }
 
   get filteredData() {
     if (this.searchTerm) {

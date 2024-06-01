@@ -5,25 +5,36 @@ import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app.routes";
 import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
+import { CategoryListComponent } from "./components/category/category-list/category-list.component";
+import { CommonModule } from "@angular/common";
+import { RouterOutlet } from "@angular/router";
+import { UserListComponent } from "./components/users/list/list.component";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
 
     declarations: [
         AppComponent,
-
-        MenuComponent,
-        LandingPageComponent
+        CategoryListComponent
     ],
 
     imports: [
-        AppRoutingModule,
+        FormsModule,
+        BrowserModule,
+        CommonModule,
+        RouterOutlet,
         MenuComponent,
-        FormsModule
+        UserListComponent,
+        AppRoutingModule,
+        HttpClientModule
     ],
 
-    providers: [],
+    providers: [
+    ],
 
-    bootstrap: [],
+    bootstrap: [
+        AppComponent
+    ],
 })
 
 export class AppModule {

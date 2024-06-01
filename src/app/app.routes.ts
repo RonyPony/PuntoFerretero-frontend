@@ -18,7 +18,7 @@ export const appRoutes: Routes = [
     { path: '', component: LandingPageComponent },
     { path: 'login', component: LoginComponent },
     { path: 'users', component: UsersComponent },
-    { path: 'userslist', component: UserListComponent },
+    { path: 'listusers', component: UserListComponent },
     { path: 'newuser', component: UserCreateComponent },
     { path: 'products', component: ProductsComponent },
     { path: 'productlist', component: ProductListComponent },

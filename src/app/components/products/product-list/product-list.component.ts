@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ProductService } from '../../../services/product.service.service';
 
 @Component({
   selector: 'app-product-list',
@@ -9,15 +10,31 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './product-list.component.html',
   styleUrl: './product-list.component.scss'
 })
-export class ProductListComponent {
+export class ProductListComponent implements OnInit {
+  /**
+   *
+   */
+  constructor(private productService: ProductService) {
+
+  }
+  ngOnInit(): void {
+    this.getData()
+  }
   searchTerm: string = '';
   data: any[] = [
-    { nombre: 'Juan', apellido: 'Martinez', created: '10/10/2021', updated: '10/10/2021' },
-    { nombre: 'Miguel', apellido: 'jimenez', created: '10/10/2021', updated: '10/10/2021' },
-    { nombre: 'Pedro', apellido: 'cruz', created: '10/10/2021', updated: '10/10/2021' },
-    { nombre: 'Pepe', apellido: 'amarillo', created: '10/10/2021', updated: '10/10/2021' },
-    // Agrega más datos según sea necesario
   ];
+
+  getData() {
+    this.productService.getAllProducts().subscribe((x) => {
+      console.log(x)
+      this.data = x
+    })
+  }
+
+  formatDate(date: string) {
+    let res: Date = new Date(date);
+    return res.toLocaleString();
+  }
 
   get filteredData() {
     if (this.searchTerm) {

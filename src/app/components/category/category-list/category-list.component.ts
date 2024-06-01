@@ -4,10 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-category-list',
-  standalone: true,
-  imports: [
-    FormsModule, CommonModule
-  ],
+
   templateUrl: './category-list.component.html',
   styleUrl: './category-list.component.scss'
 })

@@ -1,9 +1,13 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-category-create',
   standalone: true,
-  imports: [],
+  imports: [
+
+  ],
   templateUrl: './category-create.component.html',
   styleUrl: './category-create.component.scss'
 })

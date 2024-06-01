@@ -5,23 +5,25 @@
     <table class="table table-striped">
         <thead>
             <tr>
-                <th>Nombre</th>
+                <th>Producto</th>
                 <th>Categoria</th>
                 <th>Cantidad</th>
                 <th>Descripcion</th>
                 <th>Descuento</th>
+                <th>Creado en</th>
                 <th>Actualizado en</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let item of filteredData">
-                <td>{{ item.nombre }}</td>
-                <td>{{ item.category }}</td>
-                <td>{{ item.qty }}</td>
+                <td>{{ item.productName }}</td>
+                <td>{{ item.productCategoryId }}</td>
+                <td>{{ item.itenCount }}</td>
                 <td>{{ item.description }}</td>
                 <td>{{ item.discount }}</td>
-                <td>{{ item.updated }}</td>
+                <td>{{ formatDate(item.createdDate) }}</td>
+                <td>{{ formatDate(item.updatedDate) }}</td>
                 <td><button class="btn btn-warning">Editar</button></td>
             </tr>
         </tbody>

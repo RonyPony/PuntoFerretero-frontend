@@ -20,7 +20,7 @@ export class UsersComponent {
   goTo(value: any) {
     switch (value) {
       case 0:
-        this.router.navigate(['/userslist']);
+        this.router.navigate(['/listusers']);
         break;
       case 1:
         this.router.navigate(['/newuser']);

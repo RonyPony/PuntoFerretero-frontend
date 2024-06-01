@@ -14,21 +14,22 @@
         <h2 class="mt-5">Formulario - Crear Producto</h2>
         <form>
             <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                <label for="nombre">Nombre del producto</label>
+                <input type="text" class="form-control" id="nombre" placeholder="Ingresa el nombre">
             </div>
             <div class="form-group">
-                <label for="apellido">Apellido</label>
-                <input type="text" class="form-control" id="apellido" placeholder="Ingresa tu apellido">
+                <label for="category">Categoria</label>
+                <input type="text" class="form-control" id="category" placeholder="Ingresa la categoria">
             </div>
             <div class="form-group">
-                <label for="clave">Clave</label>
-                <input type="password" class="form-control" id="clave" placeholder="Ingresa tu clave">
+                <label for="count">Clave</label>
+                <input type="number" class="form-control" id="count" placeholder="Ingresa cantidad">
             </div>
             <div class="form-group">
-                <label for="repetir-clave">Repetir Clave</label>
-                <input type="password" class="form-control" id="repetir-clave" placeholder="Repite tu clave">
+                <label for="description">Repetir Clave</label>
+                <input type="text" class="form-control" id="description" placeholder="Ingresa descripcion">
             </div>
+            <span (click)="onSubmit()">go</span>
             <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
     </div>
