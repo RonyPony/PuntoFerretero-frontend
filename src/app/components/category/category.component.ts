@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [],
   templateUrl: './category.component.html',
-  styleUrl: './category.component.scss'
+  styleUrls: ['./category.component.scss']
 })
 export class CategoryComponent {
   /**

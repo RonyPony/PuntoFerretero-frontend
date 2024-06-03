@@ -7,7 +7,7 @@ import { Product } from '../../../models/product';
   standalone: true,
   imports: [],
   templateUrl: './product-create.component.html',
-  styleUrl: './product-create.component.scss'
+  styleUrls: ['./product-create.component.scss']
 })
 export class ProductCreateComponent {
   nombre!: string;

@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule, CommonModule
   ],
   templateUrl: './sales-list.component.html',
-  styleUrl: './sales-list.component.scss'
+  styleUrls: ['./sales-list.component.scss']
 })
 export class SalesListComponent {
   searchTerm: string = '';

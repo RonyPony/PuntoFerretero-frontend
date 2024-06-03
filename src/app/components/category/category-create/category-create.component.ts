@@ -9,7 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
   ],
   templateUrl: './category-create.component.html',
-  styleUrl: './category-create.component.scss'
+  styleUrls: ['./category-create.component.scss']
 })
 export class CategoryCreateComponent {
 

@@ -8,7 +8,7 @@ import { AuthServiceService } from '../../../services/auth.service.service';
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './list.component.html',
-  styleUrl: './list.component.scss'
+  styleUrls: ['./list.component.scss']
 })
 export class UserListComponent implements OnInit {
   constructor(

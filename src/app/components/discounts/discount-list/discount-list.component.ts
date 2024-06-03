@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule, CommonModule
   ],
   templateUrl: './discount-list.component.html',
-  styleUrl: './discount-list.component.scss'
+  styleUrls: ['./discount-list.component.scss']
 })
 export class DiscountListComponent {
   searchTerm: string = '';

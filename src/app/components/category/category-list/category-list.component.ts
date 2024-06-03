@@ -6,7 +6,7 @@ import { FormsModule } from '@angular/forms';
   selector: 'app-category-list',
 
   templateUrl: './category-list.component.html',
-  styleUrl: './category-list.component.scss'
+  styleUrls: ['./category-list.component.scss']
 })
 export class CategoryListComponent {
   searchTerm: string = '';

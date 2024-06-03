@@ -8,7 +8,7 @@ import { ProductService } from '../../../services/product.service.service';
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: './product-list.component.html',
-  styleUrl: './product-list.component.scss'
+  styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
   /**
