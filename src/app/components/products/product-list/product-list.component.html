@@ -21,7 +21,7 @@
                 <td>{{ item.productCategoryId }}</td>
                 <td>{{ item.itenCount }}</td>
                 <td>{{ item.description }}</td>
-                <td>{{ item.discount }}</td>
+                <td>{{ verifyDiscount(item.discount) }}</td>
                 <td>{{ formatDate(item.createdDate) }}</td>
                 <td>{{ formatDate(item.updatedDate) }}</td>
                 <td><button class="btn btn-warning">Editar</button></td>

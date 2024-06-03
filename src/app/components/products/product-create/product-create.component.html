@@ -12,25 +12,32 @@
 <body>
     <div class="container">
         <h2 class="mt-5">Formulario - Crear Producto</h2>
-        <form>
+        <form name="product">
             <div class="form-group">
                 <label for="nombre">Nombre del producto</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingresa el nombre">
+                <input type="text" class="form-control" name="name" [(ngModel)]="nombre" id="nombre"
+                    placeholder="Ingresa el nombre">
             </div>
             <div class="form-group">
                 <label for="category">Categoria</label>
-                <input type="text" class="form-control" id="category" placeholder="Ingresa la categoria">
+                <!--  <input type="text" class="form-control" name="category" [(ngModel)]="category" id="category"
+                    placeholder="Ingresa la categoria"> -->
+                <select [(ngModel)]="categoriaSeleccionada">
+                    <option *ngFor="let opcion of opciones" [value]="opcion">{{opcion.productcategoryName}}</option>
+                </select>
+
             </div>
             <div class="form-group">
-                <label for="count">Clave</label>
-                <input type="number" class="form-control" id="count" placeholder="Ingresa cantidad">
+                <label for="count">Cantidad</label>
+                <input type="number" class="form-control" name="count" [(ngModel)]="count" id="count"
+                    placeholder="Ingresa cantidad">
             </div>
             <div class="form-group">
-                <label for="description">Repetir Clave</label>
-                <input type="text" class="form-control" id="description" placeholder="Ingresa descripcion">
+                <label for="description">Descripcion</label>
+                <input type="text" class="form-control" name="description" [(ngModel)]="description" id="description"
+                    placeholder="Ingresa descripcion">
             </div>
-            <span (click)="onSubmit()">go</span>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="button" (click)="onSubmit()" class="btn btn-primary">Enviar</button>
         </form>
     </div>
 </body>

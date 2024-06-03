@@ -3,13 +3,13 @@
     <h1 class="logo">PuntoFerretero</h1>
     <nav>
         <ul class="menu">
-            <li><a href="/">Inicio</a></li>
-            <li><a href="/products">Productos</a></li>
-            <li><a href="/categories">Categorias de Productos</a></li>
-            <li><a href="/users">Usuarios</a></li>
-            <li><a href="/sales">Ventas</a></li>
-            <li><a href="/discounts">Descuentos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a (click)="goTo('/')">Inicio</a></li>
+            <li><a (click)="goTo('/products')">Productos</a></li>
+            <li><a (click)="goTo('/categories')">Categorias de Productos</a></li>
+            <li><a (click)="goTo('/users')">Usuarios</a></li>
+            <li><a (click)="goTo('/sales')">Ventas</a></li>
+            <li><a (click)="goTo('/discounts')">Descuentos</a></li>
+            <li><a (click)="goTo('/contacto')">Contacto</a></li>
         </ul>
     </nav>
 </header>

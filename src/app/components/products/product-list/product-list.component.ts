@@ -31,6 +31,14 @@ export class ProductListComponent implements OnInit {
     })
   }
 
+  verifyDiscount(data: string) {
+    if (data === "00000000-0000-0000-0000-000000000000") {
+      return "Sin Descuentos";
+    } else {
+      return "Aplican Descuentos"
+    }
+  }
+
   formatDate(date: string) {
     let res: Date = new Date(date);
     return res.toLocaleString();

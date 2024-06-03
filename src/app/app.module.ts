@@ -11,12 +11,14 @@ import { CategoryListComponent } from './components/category/category-list/categ
 import { CategoryComponent } from './components/category/category.component';
 import { CategoryCreateComponent } from './components/category/category-create/category-create.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductCreateComponent } from './components/products/product-create/product-create.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    CategoryListComponent
+    CategoryListComponent,
+    ProductCreateComponent
   ],
   imports: [
     AppRoutingModule,
@@ -24,7 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     BrowserModule,
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
