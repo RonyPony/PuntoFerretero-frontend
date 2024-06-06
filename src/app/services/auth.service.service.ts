@@ -7,7 +7,7 @@ import { User } from '../models/user';
   providedIn: 'root',
 })
 export class AuthServiceService {
-  private apiUrl = 'https://localhost:7285/api/User';
+  private apiUrl = 'http://216.172.100.170:8099/api/User';
   constructor(
     private http: HttpClient
   ) {

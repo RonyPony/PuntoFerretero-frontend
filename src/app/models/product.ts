@@ -8,4 +8,6 @@ export interface Product {
     isDeleted?: boolean;
     description: string;
     discount: string;
+    sellingPrice: number;
+    buyingPrice: number;
 }

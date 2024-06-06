@@ -13,8 +13,10 @@ import { UsersComponent } from './components/users/users.component';
 import { SalesListComponent } from './components/sales/sales-list/sales-list.component';
 import { DiscountListComponent } from './components/discounts/discount-list/discount-list.component';
 import { LoginComponent } from './components/login/login.component';
+import { ProductEditComponent } from './components/products/product-edit/product-edit.component';
 
 const routes: Routes = [
+  // { path: '**', component: PageNotFoundComponent }
   { path: '', component: LandingPageComponent },
   { path: 'login', component: LoginComponent },
   { path: 'users', component: UsersComponent },
@@ -22,6 +24,7 @@ const routes: Routes = [
   { path: 'newuser', component: UserCreateComponent },
   { path: 'products', component: ProductsComponent },
   { path: 'productlist', component: ProductListComponent },
+  { path: 'editproduct', component: ProductEditComponent },
   { path: 'newproduct', component: ProductCreateComponent },
   { path: 'categories', component: CategoryComponent },
   { path: 'newcategory', component: CategoryCreateComponent },

@@ -14,22 +14,16 @@
         <h2 class="mt-5">Formulario - Crear Categoria</h2>
         <form>
             <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="Ingresa tu nombre">
+                <label for="nombre">Nombre de la categoria</label>
+                <input type="text" class="form-control" name="name" [(ngModel)]="nombre" id="nombre"
+                    placeholder="Ingresa el nombre">
             </div>
             <div class="form-group">
-                <label for="apellido">Apellido</label>
-                <input type="text" class="form-control" id="apellido" placeholder="Ingresa tu apellido">
+                <label for="descripcion">Descripcion</label>
+                <input type="text" class="form-control" name="descripcion" [(ngModel)]="descripcion" id="descripcion"
+                    placeholder="Ingresa una descripcion">
             </div>
-            <div class="form-group">
-                <label for="clave">Clave</label>
-                <input type="password" class="form-control" id="clave" placeholder="Ingresa tu clave">
-            </div>
-            <div class="form-group">
-                <label for="repetir-clave">Repetir Clave</label>
-                <input type="password" class="form-control" id="repetir-clave" placeholder="Repite tu clave">
-            </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="submit" class="btn btn-primary">Guardar Categoria</button>
         </form>
     </div>
 </body>

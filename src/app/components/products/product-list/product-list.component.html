@@ -10,21 +10,18 @@
                 <th>Cantidad</th>
                 <th>Descripcion</th>
                 <th>Descuento</th>
-                <th>Creado en</th>
-                <th>Actualizado en</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let item of filteredData">
                 <td>{{ item.productName }}</td>
-                <td>{{ item.productCategoryId }}</td>
+                <td>{{ item.productCategoryName }}</td>
                 <td>{{ item.itenCount }}</td>
                 <td>{{ item.description }}</td>
-                <td>{{ verifyDiscount(item.discount) }}</td>
-                <td>{{ formatDate(item.createdDate) }}</td>
-                <td>{{ formatDate(item.updatedDate) }}</td>
-                <td><button class="btn btn-warning">Editar</button></td>
+                <td>{{ verifyDiscount(item.discountId) }}</td>
+                <td><button (click)="goToEdit(item.productId)" class=" btn btn-warning">Editar</button>
+                </td>
             </tr>
         </tbody>
     </table>

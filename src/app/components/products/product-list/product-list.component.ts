@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ProductService } from '../../../services/product.service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product-list',
@@ -14,7 +15,7 @@ export class ProductListComponent implements OnInit {
   /**
    *
    */
-  constructor(private productService: ProductService) {
+  constructor(private productService: ProductService, private router: Router) {
 
   }
   ngOnInit(): void {
@@ -44,13 +45,16 @@ export class ProductListComponent implements OnInit {
     return res.toLocaleString();
   }
 
+  goToEdit(id: string) {
+    this.router.navigate(['/editproduct'], { queryParams: { id: id } });
+    console.log(id)
+  }
+
   get filteredData() {
     if (this.searchTerm) {
       return this.data.filter(item =>
-        item.nombre.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-        item.apellido.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-        item.created.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
-        item.updated.toLowerCase().includes(this.searchTerm.toLowerCase())
+        item.productName.toLowerCase().includes(this.searchTerm.toLowerCase()) ||
+        item.description.toLowerCase().includes(this.searchTerm.toLowerCase())
       );
     } else {
       return this.data;
